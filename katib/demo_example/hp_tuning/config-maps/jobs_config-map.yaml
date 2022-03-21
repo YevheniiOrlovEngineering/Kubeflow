@@ -44,9 +44,8 @@ data:
                 - "--epochs=2"
                 - "--lr=${trialParameters.learningRate}"
                 - "--momentum=${trialParameters.momentum}"
+                - "--log-path=/katib/mnist.log"
           restartPolicy: Never
-  # - "--log-path=/katib/mnist.log"
-
   # For ConfigMap templates double quotes must set in commands to correct parse JSON parameters in Trial Template (e.g nn_config, architecture)
   enasCPUTemplate.yaml: |-
     apiVersion: batch/v1
